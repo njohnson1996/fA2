@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +26,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="qnf-Lp-PSP">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qnf-Lp-PSP">
                                             <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
@@ -34,6 +35,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="21a-zD-ib8" kind="presentation" id="EcS-bX-CTV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,14 +50,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IqG-tW-rn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1228" y="89.505247376311857"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="Lxk-v8-A6u">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="5jJ-s3-Ail" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tQX-Vz-U0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1769" y="757"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hEm-JQ-zYi">
@@ -72,6 +68,121 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgw-be-D5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="288.80000000000001" y="89.505247376311857"/>
+        </scene>
+        <!--Root Page View Controller-->
+        <scene sceneID="081-FO-elS">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="21a-zD-ib8" customClass="RootPageViewController" customModule="fA2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJI-Vx-8ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="904"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="k4D-P1-BeL">
+            <objects>
+                <viewController storyboardIdentifier="orangeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YSp-oT-shF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L4q-6j-4MI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AUX-hQ-G37">
+                                <rect key="frame" x="67" y="107" width="241" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.71369925919999999" blue="0.1058190785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SGp-k5-dT3">
+                                <rect key="frame" x="31" y="349" width="312" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="UserInput:" destination="Zwb-7T-IRc" eventType="editingDidEnd" id="kqf-AE-kQI"/>
+                                    <action selector="UserTextInput:" destination="Zwb-7T-IRc" eventType="editingDidEnd" id="dne-Ub-GQs"/>
+                                    <action selector="userText1:" destination="OLe-65-t2w" eventType="editingDidEnd" id="Jjs-XD-2w8"/>
+                                    <action selector="userText:" destination="Zwb-7T-IRc" eventType="editingDidEnd" id="73d-ck-1wO"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.71369925919999999" blue="0.1058190785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bhC-63-5yF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyu-ir-6CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OLe-65-t2w" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="1608"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1c3-Ax-kxO">
+            <objects>
+                <viewController storyboardIdentifier="yellowVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7ww-FB-q3y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ukd-v4-UZc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3U-id-YKB">
+                                <rect key="frame" x="127" y="110" width="121" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.97002402480000005" blue="0.3084408569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDo-9e-RH8">
+                                <rect key="frame" x="39" y="345" width="312" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="UserInput:" destination="Zwb-7T-IRc" eventType="editingDidEnd" id="Lur-th-6hp"/>
+                                    <action selector="UserTextInput:" destination="Zwb-7T-IRc" eventType="editingDidEnd" id="rno-oo-YcS"/>
+                                    <action selector="userText:" destination="Zwb-7T-IRc" eventType="editingDidEnd" id="1W9-O7-d7n"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnp-db-R9c">
+                                <rect key="frame" x="104" y="460" width="166" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="Enter"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97002402480000005" blue="0.3084408569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ae0-EL-nsz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEF-e8-UrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Zwb-7T-IRc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="615" y="1607"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dFN-tZ-01f">
+            <objects>
+                <viewController storyboardIdentifier="purpleVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ndw-LL-mmu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Ke-Xn-NSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrC-UH-Lr0">
+                                <rect key="frame" x="139" y="134" width="146" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="cU1-Fh-SEk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Un-Dx-Ude" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="1606"/>
         </scene>
     </scenes>
 </document>
