@@ -2,6 +2,57 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:fA2.xcodeproj">
+      location = "group:../Charts.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Assets">
+   </FileRef>
+   <FileRef
+      location = "group:../Cartfile">
+   </FileRef>
+   <FileRef
+      location = "group:../Cartfile.private">
+   </FileRef>
+   <FileRef
+      location = "group:../Cartfile.resolved">
+   </FileRef>
+   <FileRef
+      location = "group:../CHANGELOG.md">
+   </FileRef>
+   <FileRef
+      location = "group:../Charts.podspec">
+   </FileRef>
+   <FileRef
+      location = "group:../CONTRIBUTING.md">
+   </FileRef>
+   <FileRef
+      location = "group:../Gemfile">
+   </FileRef>
+   <FileRef
+      location = "group:../Gemfile.lock">
+   </FileRef>
+   <FileRef
+      location = "group:../LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:../Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../Rakefile">
+   </FileRef>
+   <FileRef
+      location = "group:../README.md">
+   </FileRef>
+   <FileRef
+      location = "group:../scripts">
+   </FileRef>
+   <FileRef
+      location = "group:../Source">
+   </FileRef>
+   <FileRef
+      location = "group:../Tests">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
