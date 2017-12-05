@@ -34,17 +34,17 @@ class MainMenuViewController: UITableViewController {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return optionItems.count
-    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return optionItems.count
+//    }
+//    
     
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath)
-        cell.textLabel?.text = optionItems[indexPath.row]
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath)
+//        cell.textLabel?.text = optionItems[indexPath.row]
+//        return cell
+//    }
     
     
     /*
