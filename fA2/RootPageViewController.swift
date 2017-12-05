@@ -7,31 +7,30 @@
 //
 
 import UIKit
-
-class RootPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+import Foundation
+class RootPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     
     lazy var viewControllerList: [UIViewController] = {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
-        let vc1 = sb.instantiateViewController(withIdentifier: "purpleVC")
+        let vc1 = sb.instantiateViewController(withIdentifier: "orangeVC")
         let vc2 = sb.instantiateViewController(withIdentifier: "yellowVC")
-        let vc3 = sb.instantiateViewController(withIdentifier: "orangeVC")
+        let vc3 = sb.instantiateViewController(withIdentifier: "purpleVC")
         
         return [vc1, vc2, vc3]
     }()
     
-    var valueX = Int()
-    var valueY = Int()
-    @IBAction func userText1(_ sender: Any) {
-        return 
-        
+    var valueX: String = ""
+    var valueY: String = ""
+    var total: String = ""
+    @IBAction func userInput_1 (sender : UITextField){
+        sender.text = valueX
     }
     
-    
-    @IBAction func userText2(_ sender: Any) {
-        return
-        
+    @IBAction func userInput_2 (sender: UITextField){
+        sender.text = valueY
+        total = valueX + valueY
     }
     
     

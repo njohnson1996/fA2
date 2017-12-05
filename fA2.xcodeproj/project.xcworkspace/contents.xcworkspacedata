@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:fA2.xcodeproj">
+      location = "group:/Users/brandon/Documents/fA2/fA2/RootPageViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
